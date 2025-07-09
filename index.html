@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+    <meta property="og:url" content="URL OF THE WEBSITE"/>
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>DFRot: Achieving Outlier-Free and Massive Activation-Free for Rotated LLMs with Refined Rotation</title>
+    <link rel="icon" type="image/x-icon" href="static/images/images.jpeg">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">DFRot: Achieving Outlier-Free and Massive Activation-Free
+                        for Rotated LLMs with Refined Rotation</h1>
+                    <div class="is-size-5 publication-authors">
+                        <!-- Paper authors -->
+                        <span class="author-block">
+                <a href="https://jingyangxiang.github.io" target="_blank">Jingyang Xiang</a><sup>1</sup>,</span>
+                        <span class="author-block">
+                  <a href="https://engineering.nyu.edu/faculty/sai-qian-zhang" target="_blank">Sai Qian Zhang</a><sup>*,1</sup>,</span>
+                    </div>
+
+                    <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>New York University
+                    <br><a href="https://colmweb.org/index.html" target="_blank"
+                           style="color: #90ee90; text-decoration: none; font-weight: bold;">COLM 2025</a>
+                    </span>
+                        <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding Author</small></span>
+                    </div>
+                    <style>
+                        blockquote {
+                          background-color: #f0f0f0; /* 浅灰色背景 */
+                          border-left: 5px solid #ccc; /* 左侧灰色竖线 */
+                          margin: 1.5em 10px;
+                          padding: 1em 1.5em;
+                          font-family: 'Georgia', serif; /* 优雅的衬线字体 */
+                          font-size: 1.2em;
+                          color: #333;
+                          position: relative;
+                          text-align: left; /* 句子左对齐 */
+                        }
+                        blockquote footer {
+                          text-align: right; /* 作者右对齐 */
+                          font-style: italic;
+                          font-size: 1em;
+                          color: #666;
+                          margin-top: 0.5em;
+                        }
+                    </style>
+
+                    <blockquote>
+                        TDLR: In the case of 4-bit activation quantization, we explained why the randomized Hadamard
+                        transforms can achieve significantly higher accuracy than randomized orthogonal transforms.
+                        <!--  <p>Genius is one percent inspiration and ninety-nine percent perspiration.</p>-->
+                        <!--  <footer>— Thomas Edison</footer>-->
+                    </blockquote>
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- Arxiv PDF link -->
+                            <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2412.00648" target="_blank"
+                           class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                            <!-- Supplementary PDF link -->
+                            <span class="link-block">
+                      <a href="https://arxiv.org/pdf/2412.00648" target="_blank"
+                         class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                            <!-- Github link -->
+                            <span class="link-block">
+                    <a href="https://github.com/JingyangXiang/DFRot" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                  </span>
+
+                            <!-- ArXiv abstract Link -->
+                            <span class="link-block">
+                  <a href="https://arxiv.org/abs/2412.00648" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+                </span>
+                            <!-- zhihu -->
+                            <span class="link-block">
+                <a href="https://zhuanlan.zhihu.com/p/12186430182" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <span class="zhihu-icon">知</span>
+                  </span>
+                  <span>Zhihu</span>
+                </a>
+              </span>
+
+                            <style>
+                                .zhihu-icon {
+                                  font-family: Arial, sans-serif;
+                                  font-weight: bold;
+                                  color: #0084ff;
+                                  background-color: blac=k;
+                                  border-radius: 2px;
+                                  padding: 0 2px;
+                                  font-size: 0.9em;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--&lt;!&ndash; Teaser video&ndash;&gt;-->
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
+<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
+<!--        <source src="static/videos/banner_video.mp4"-->
+<!--        type="video/mp4">-->
+<!--      </video>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End teaser video &ndash;&gt;-->
+
+<!-- Image carousel -->
+<section class="hero is-small">
+    <!-- 新增样式：仅调整图片项的行间距 -->
+    <style>
+        /* 针对图片容器内的.item添加底部间距（行间距） */
+        #columns.is-multiline.is-centered .item {
+            margin-bottom: 30px; /* 可根据需要调整数值，如40px */
+        }
+        /* 移除最后一张图片的底部间距，避免多余空白 */
+        #columns.is-multiline.is-centered .item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+
+    <div class="hero-body">
+        <div class="container">
+            <div id="columns" class="columns is-multiline is-centered"> <!-- 修正了id的语法错误 -->
+                <div class="item">
+                    <img src="static/images/quant_error_4_12_pages-to-jpg-0001.jpg" alt="MY ALT TEXT"/>
+                    <h2 class="subtitle has-text-centered">
+                      Comparison of 4-bit activation quantization error <span style="font-family: serif;">E</span>(&middot;) for each token with <strong>NR</strong>, <strong>RO</strong> and <strong>RH</strong> for (a) LLaMA-7B, (b) LLaMA2-7B, (c) LLaMA2-13B and (d) LLaMA3-8B. The tokens are from <code>model.layers.6.post_attention_layernorm</code>.
+                    </h2>
+                </div>
+
+                <div class="item">
+                    <img src="static/images/d_LLaMA3-8B_4_page-0001.jpg" alt="MY ALT TEXT"/>
+                    <h2 class="subtitle has-text-centered">
+                      Comparison of 2D 4-bit quantization errors for tokens with <strong>NR</strong>, <strong>RO</strong>, <strong>RH</strong> and DFRot for LLaMA3-8B.
+                    </h2>
+                </div>
+                <div class="item">
+                    <img src="static/images/llama3_8B_vanilla_random_hadamard_dfrot_4_page-0001.jpg" alt="MY ALT TEXT"/>
+                    <h2 class="subtitle has-text-centered">
+                        Comparison of 4-bit quantization error for the token with massive activation with <strong>NR</strong>, <strong>RO</strong>, <strong>RH</strong> and <strong>DFRot</strong> for LLaMA3-8B.
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Rotating the activation and weight matrices to reduce the influence of outliers in large
+                        language models (LLMs) has recently attracted significant attention, particularly in the context
+                        of model quantization.
+                        Prior studies have shown that in low-precision quantization scenarios, such as 4-bit weights and
+                        4-bit activations (W4A4), randomized Hadamard transforms can achieve significantly higher
+                        accuracy than randomized orthogonal transforms.
+                        Notably, the reason behind this phenomenon remains unknown.
+                        In this paper, we find that these transformations show substantial improvement in eliminating
+                        outliers for common tokens and achieve similar quantization error.
+                        The primary reason for the accuracy difference lies in the fact that randomized Hadamard
+                        transforms can slightly reduce the quantization error for tokens with massive activations while
+                        randomized orthogonal transforms increase the quantization error.
+                        Due to the extreme rarity of these tokens and their critical impact on model accuracy, we
+                        consider this a long-tail optimization problem,
+                        and therefore construct a simple yet effective method: a weighted loss function.
+                        Additionally, we propose an optimization strategy for the rotation matrix that involves
+                        alternating optimization of quantization parameters while employing orthogonal Procrustes
+                        transforms to refine the rotation matrix.
+                        This makes the distribution of the rotated activation values more conducive to quantization,
+                        especially for tokens with massive activations.
+                        Our method enhances the Rotated LLMs by achieving dual free,
+                        <strong><i>Outlier-Free</i></strong> and <strong><i>Massive Activation-Free</i></strong>, dubbed
+                        as <strong><i>DFRot</i></strong>.
+                        Extensive experiments demonstrate the effectiveness and efficiency of DFRot.
+                        By tuning the rotation matrix using just a single sample,
+                        DFRot achieves a perplexity improvement of 0.98 and 0.95 on W4A4KV4 and W4A4KV16, respectively,
+                        for LLaMA3-70B, a model known for its quantization challenges.
+                        Code is available at <a href="https://github.com/JingyangXiang/DFRot" target="_blank"
+                                                style="color: #0366d6; text-decoration: none; font-weight: bold;">GitHub</a>.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!--&lt;!&ndash; Youtube video &ndash;&gt;-->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          -->
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End youtube video &ndash;&gt;-->
+
+
+<!--&lt;!&ndash; Video carousel &ndash;&gt;-->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title is-3">Another Carousel</h2>-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-video1">-->
+<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel1.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video2">-->
+<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel2.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video3">-->
+<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel3.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End video carousel &ndash;&gt;-->
+
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">-->
+<!--    <div class="hero-body">-->
+<!--        <div class="container">-->
+<!--            <h2 class="title">Poster</h2>-->
+
+<!--            <iframe src="static/pdfs/DFRot.pdf" width="100%" height="550">-->
+<!--            </iframe>-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--End paper poster -->
+
+
+<!-- Paper poster-->
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title">Paper</h2>
+
+            <iframe src="static/pdfs/DFRot.pdf" width="100%" height="550">
+            </iframe>
+
+        </div>
+    </div>
+</section>
+<!--End paper poster-->
+
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{
+  xiang2024dfrot,
+  title={DFRot: Achieving Outlier-Free and Massive Activation-Free for Rotated LLMs with Refined Rotation},
+  author={Xiang, Jingyang and Zhang, Sai Qian},
+  journal={arXiv preprint arXiv:2412.00648},
+  year={2024}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+
+                    <p>
+                        This page was built using the <a
+                            href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic
+                        Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                                                                target="_blank">Nerfies</a> project
+                        page.
+                        You are free to borrow the source code of this website, we just ask that you link back to this
+                        page in the footer. <br> This website is licensed under a <a rel="license"
+                                                                                     href="http://creativecommons.org/licenses/by-sa/4.0/"
+                                                                                     target="_blank">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
